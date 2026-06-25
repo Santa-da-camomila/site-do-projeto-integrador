@@ -1,0 +1,319 @@
+*{
+margin: 0;
+padding: 0;
+}
+
+.container{
+    background-image: url(../trasparenciafundo1000.png);
+    background-color:#993333;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+main{
+    background-image: url(../trasparenciafundo1000.png);
+    background-color: #993333;
+}
+/* Centraliza tudo na tela */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+ 
+   
+     /* Faz o container ocupar toda a altura da tela */
+    font-family: copperplate;
+    gap: 10px; /* Distância de 30px entre a logo e as abas */
+
+}
+
+/* Tamanho da Logo */
+.logo {
+    width: 330px; /* Ajuste o tamanho conforme sua necessidade */
+    height: auto;
+    margin-top: 10px;
+}
+
+/* Estilização das Abas */
+.abas {
+    display: flex;
+    gap: 100px; /* Espaçamento entre as abas */
+}
+.truque{
+    text-decoration: none;
+    color:white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #990033;
+    transition: background-color 0.3s;
+}
+
+
+.pasty{
+ text-decoration: none;
+    color:white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #990033;
+    transition: background-color 0.3s;
+}
+
+.blaja{
+text-decoration: none;
+    color:#990033;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: white;
+    transition: background-color 0.3s;
+}
+/* main (teste do ia google */
+
+/* O Contêiner da Grade */
+.grid-container {
+  display: grid;
+  /* Cria duas colunas de tamanhos iguais */
+  grid-template-columns: 1fr 1fr 1fr 1fr ; 
+  /* Define o espaçamento (linhas brancas da imagem) */
+  gap: 10px; 
+   padding-top: 200px;
+  /* Desenha o mapa do layout */
+  grid-template-areas:
+    "cabecalho cabecalho cabecalho cabecalho"
+    "textbals textbals textbals textbals"
+    "dealer dealer dealer dealer "
+    "glossario glossario glossario glossario "
+    "valores valores principal principal "
+    "valores valores principal principal "
+    
+    "quando quando quando quando "
+    "passo passo passo passo  ";
+    font-family: copperplate;
+}
+
+/* Estilo visual padrão dos blocos (cor azulada da imagem) */
+.bloco {
+  background-color: whitesmoke;
+  color: #3b3b5c;
+  padding: 10px;
+  
+  
+ 
+  font-weight: bold;
+  border-radius: 2px;
+}
+
+/* Vinculando cada classe à sua respectiva área no mapa */
+.cabecalho { grid-area: cabecalho;
+    min-height: 60px; 
+    max-height: fit-content;
+    margin-left: 8%; 
+    margin-right: 8%;
+    margin-top: 1%;
+    display: block;
+}
+.dealer{ grid-area:  dealer;
+ min-height: 60px; 
+    margin-left: 8%; 
+    margin-right: 8%;
+    margin-top: 5%;
+    background-color: #fdfdff;
+}
+
+.glossario { grid-area: glossario; 
+    min-height: 200px;
+    margin-left: 8%;
+     margin-right: 8%;
+     margin-top: 5%;}
+
+.principal { grid-area: principal; 
+    min-height: 420px; 
+    margin-left: 10%; 
+    margin-right: 16%;
+    margin-top: 5%;
+margin-bottom: 20%;}
+
+.valores { grid-area: valores;
+     min-height: 42%;
+     margin-top: 5%;
+     margin-left: 16%;
+      margin-right: 10%;
+    display: block; 
+    margin-bottom: 5%;
+}
+
+/* .entreclas2 { grid-area: entreclas2;
+     min-height: 420px;
+     margin-top: 30px;
+     margin-left: 30px;
+      margin-right: 30px;
+    background-color: none;} */
+.textbals{ grid-area: textbals;
+    min-height: 10px;
+    margin-top: 0%;
+     margin-left: 8%; 
+     margin-right: 8%;
+     background-color: whitesmoke;
+}
+
+.quando   { grid-area: quando; 
+    min-height: 100px;
+    margin-top: 1%;
+     margin-left: 8%; 
+     margin-right: 8%;}
+
+
+.passo{ grid-area: passo; 
+    min-height: 200px;
+    margin-top: 5%;
+     margin-left: 8%; 
+     margin-right: 8%;
+     margin-bottom: 5%;}
+
+/* foto do cabecalho */
+.cabecalhotruco{
+    width: 100%;
+  
+}
+.cartas21{
+    min-width: 50%;
+    max-width: 50%;
+
+}
+/* TEXTO */
+B{
+    color:crimson;
+}
+
+I{
+    color: lightslategrey;
+}
+H1{
+    color: darkred;
+}
+
+h3{
+    color: BLACK;
+}
+p{
+    /* background-color: black; */
+}
+
+
+/* tentativa de responsividade(parte 2) */
+
+
+
+
+
+
+
+/* ==========================================================================
+   2. REGRAS DE RESPONSIVIDADE PARA TABLETS (Telas até 1023px)
+   ========================================================================== */
+@media (max-width: 1023px) {
+    .logo {
+        width: 280px;
+    }
+
+    .abas {
+        gap: 30px; /* Diminui o espaçamento grande entre os botões */
+    }
+
+    .grid-container {
+        padding-top: 180px; /* Ajusta a distância do topo */
+    }
+
+    /* Reduz as margens laterais agressivas para o conteúdo respirar melhor no tablet */
+    .cabecalho, .dealer, .glossario, .textbals, .quando, .passo {
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+
+    /* Suaviza as margens das seções que ficam lado a lado */
+    .valores {
+        margin-left: 4%;
+        margin-right: 2%;
+    }
+
+    .principal {
+        margin-left: 2%;
+        margin-right: 4%;
+        margin-bottom: 10%;
+    }
+}
+
+
+/* ==========================================================================
+   3. REGRAS DE RESPONSIVIDADE PARA CELULARES (Telas até 767px)
+   ========================================================================== */
+@media (max-width: 767px) {
+    /* Diminui e adapta a logo */
+    .logo {
+        width: 60%;
+        max-width: 220px;
+    }
+
+    /* Se os botões não couberem na mesma linha, eles quebram de forma organizada */
+    .abas {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .truque, .pasty, .blaja {
+        font-size: 14px;
+        padding: 8px 12px;
+        flex: 1 1 auto;
+        text-align: center;
+    }
+
+    /* Muda o Grid de 4 colunas para 1 coluna vertical */
+    .grid-container {
+        grid-template-columns: 1fr; 
+        gap: 15px;
+        padding-top: 220px; /* Aumentado pois o menu em duas linhas fica mais alto */
+        padding-left: 15px;
+        padding-right: 15px;
+        /* Alinha todas as áreas verticalmente */
+        grid-template-areas:
+            "cabecalho"
+            "textbals"
+            "dealer"
+            "glossario"
+            "valores"
+            "principal"
+            "quando"
+            "passo";
+    }
+
+    /* Reseta completamente as margens laterais grandes e as alturas fixas exageradas no mobile */
+    .cabecalho, .dealer, .glossario, .principal, .valores, .textbals, .quando, .passo {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        min-height: auto; 
+    }
+
+    /* Garante espaçamento na última seção da página */
+    .passo {
+        margin-bottom: 30px;
+    }
+
+    /* Faz com que a imagem interna de cartas ocupe mais espaço na tela pequena */
+    .cartas21 {
+        min-width: 80%;
+        max-width: 100%;
+    }
+}

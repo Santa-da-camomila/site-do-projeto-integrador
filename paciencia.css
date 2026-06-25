@@ -1,0 +1,295 @@
+*{
+margin: 0;
+padding: 0;
+}
+header{
+    background-image: url(../fundopibranco.png);
+}
+.container{
+    background-image: url(../trasparenciafundo1000.png);
+    background-color: #993333;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+main{
+    
+    background-image: url(../trasparenciafundo1000.png);
+    background-color: #993333;
+}
+/* Centraliza tudo na tela */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+ 
+   
+     /* Faz o container ocupar toda a altura da tela */
+    font-family:copperplate;
+    gap: 10px; /* Distância de 30px entre a logo e as abas */
+}
+
+/* Tamanho da Logo */
+.logo {
+    width: 330px; /* Ajuste o tamanho conforme sua necessidade */
+    height: auto;
+    margin-top: 10px;
+}
+
+/* Estilização das Abas */
+.abas {
+    display: flex;
+    gap: 100px; /* Espaçamento entre as abas */
+}
+.truque{
+    text-decoration: none;
+    color:white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #990033;
+    transition: background-color 0.3s;
+}
+
+
+.pasty{
+ text-decoration: none;
+    color:#990033;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: white;
+    transition: background-color 0.3s;
+}
+
+.blaja{
+text-decoration: none;
+    color:white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #990033;
+    transition: background-color 0.3s;
+}
+
+/* O Contêiner da Grade */
+.grid-container {
+  display: grid;
+  /* Cria duas colunas de tamanhos iguais */
+  grid-template-columns: 1fr 1fr 1fr 1fr ; 
+  /* Define o espaçamento (linhas brancas da imagem) */
+  gap: 10px; 
+   padding-top: 200px;
+  /* Desenha o mapa do layout */
+  grid-template-areas:
+    "cabecalho cabecalho cabecalho cabecalho"
+    "dealer dealer dealer dealer "
+    "glossario glossario glossario glossario "
+    "valores valores  valores valores "
+    "quando quando quando quando "
+    "dicaspassi dicaspassi dicaspassi dicaspassi"
+    ;
+    font-family: copperplate;
+}
+
+/* Estilo visual padrão dos blocos (cor azulada da imagem) */
+.bloco {
+  background-color: whitesmoke;
+  color: #3b3b5c;
+  padding: 10px;
+  
+  
+ 
+  font-weight: bold;
+  border-radius: 2px;
+}
+
+/* Vinculando cada classe à sua respectiva área no mapa */
+.cabecalho { grid-area: cabecalho;
+    min-height: 10px; 
+    max-height: fit-content;
+    margin-left: 8%; 
+    margin-right: 8%;
+    margin-top: 1%;
+    display: block;
+}
+.dealer{ grid-area:  dealer;
+ min-height: 500px; 
+    margin-left: 8%; 
+    margin-right: 8%;
+    margin-top: 10%;
+    background-color: white;
+}
+
+.glossario { grid-area: glossario; 
+    min-height: 100px;
+    margin-left: 8%;
+     margin-right: 8%;
+     margin-top: 10%;}
+
+.principal { grid-area: principal; 
+    min-height: 700px; 
+    margin-left: 8%; 
+    margin-right: 8%;
+    margin-top: 10%;}
+
+.valores { grid-area: valores;
+     min-height: 100px;
+     margin-top: 8%;
+     margin-left: 8%;
+      margin-right: 10%; }
+
+.quando   { grid-area: quando; 
+    min-height: 500px;
+    margin-top: 10%;
+     margin-left: 8%; 
+     margin-right: 8%;
+          margin-bottom: 15%;
+    }
+
+
+
+
+/* foto do cabecalho */
+.cabecalhotruco{
+    width: 100%;
+}
+
+.cartapaci{
+    width: 100%;
+}
+.taculeiro{
+    width: 100%;
+}
+
+/* TESTOS */
+h3{
+    color: BLACK;
+}
+B{
+    color:#960018;
+}
+H1{
+    color:darkred;
+}
+small{
+    color: lightslategray;
+}
+U{
+    color: #7b0000;
+}
+i{
+    color: #999999;
+}
+/* cor dos texto da are "va;or das cartas" */
+.pintarpreto{
+    color: black;
+}
+/* .mudarcordosinais{
+ color:#999999;
+} */
+h2{
+    color: crimson;
+}
+.compra{
+    color: #960018;
+}
+.vira{
+    color: #b22222;
+}
+.cinzaescuro{
+    color: #666666;
+}
+
+/* tentativa da respinsividade (parte 1)*/
+
+@media (max-width: 1023px) {
+    /* Diminui o espaço gigante entre as abas do menu */
+    .abas {
+        gap: 30px; 
+    }
+
+    /* Reduz um pouco o tamanho da logo */
+    .logo {
+        width: 280px;
+    }
+
+    /* Ajusta o espaçamento do topo por conta do menu fixo */
+    .grid-container {
+        padding-top: 180px;
+    }
+
+    /* Suaviza as margens laterais para o conteúdo aproveitar mais a tela */
+    .cabecalho, .dealer, .glossario, .principal, .valores, .quando {
+        margin-left: 4%;
+        margin-right: 4%;
+        margin-top: 5%;
+    }
+    
+    .quando {
+        margin-bottom: 8%;
+    }
+}
+
+
+/* ==========================================================================
+   3. REGRAS DE RESPONSIVIDADE PARA CELULARES (Telas até 767px)
+   ========================================================================== */
+@media (max-width: 767px) {
+    /* Faz a logo se adaptar ao tamanho de telas bem pequenas */
+    .logo {
+        width: 65%;
+        max-width: 220px;
+    }
+
+    /* Faz as abas quebrarem linha se não couberem lado a lado */
+    .abas {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    /* Deixa os botões do menu um pouco menores e flexíveis */
+    .truque, .pasty, .blaja {
+        font-size: 14px;
+        padding: 8px 12px;
+        flex: 1 1 auto;
+        text-align: center;
+    }
+
+    /* Transforma o Grid de 4 colunas em apenas 1 coluna linear */
+    .grid-container {
+        grid-template-columns: 1fr; 
+        gap: 15px;
+        padding-top: 210px; /* Aumentado porque o menu quebrou em linhas e ficou mais alto */
+        padding-left: 15px;
+        padding-right: 15px;
+        grid-template-areas:
+            "cabecalho"
+            "dealer"
+            "glossario"
+            "valores"
+            "quando"
+            "dicaspassi";
+    }
+
+    /* Elimina as margens laterais grandes para o texto não ficar espremido no celular */
+    .cabecalho, .dealer, .glossario, .principal, .valores, .quando {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 15px;
+        min-height: auto; /* Remove as alturas mínimas gigantes desnecessárias no celular */
+    }
+
+    /* Mantém uma altura mínima menor apenas para os blocos estruturais que precisam */
+    .dealer { min-height: 250px; }
+    .quando { min-height: 250px; margin-bottom: 30px; }
+}

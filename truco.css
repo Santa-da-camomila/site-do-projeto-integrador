@@ -1,0 +1,221 @@
+
+*{
+margin:0;
+padding: 0;
+}
+header{
+    /* background-image: url(../fundopibranco.png); */
+    background-color: yellow;
+}
+footer{
+    background-color: royalblue;
+}
+body{
+    background-color: black;
+    background-image: url(../trasparenciafundo1000.png);
+}
+
+
+.container{
+    background-image: url(../trasparenciafundo1000.png);
+    background-color: #993333;
+    /* background-color: rgb(177, 78, 205); */
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+main{
+    background-image: url(../trasparenciafundo1000.png);
+    background-color: #993333;
+    
+    /* background-color: black; */
+}
+/* Centraliza tudo na tela */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+ 
+   
+     /* Faz o container ocupar toda a altura da tela */
+    font-family: COPPERPLATE;
+    gap: 10px; /* Distância de 30px entre a logo e as abas */
+}
+
+/* Tamanho da Logo */
+.logo {
+    width: 330px; /* Ajuste o tamanho conforme sua necessidade */
+    height: auto;
+    margin-top: 10px;
+}
+
+/* Estilização das Abas */
+.abas {
+    display: flex;
+    gap: 100px; /* Espaçamento entre as abas */
+}
+.truque{
+    text-decoration: none;
+    color:#990033;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s;
+}
+
+
+.pasty{
+ text-decoration: none;
+    color:white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #990033;
+    transition: background-color 0.3s;
+}
+
+.blaja{
+text-decoration: none;
+    color:white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #990033;
+    transition: background-color 0.3s;
+}
+
+
+/* agora comeca o main */
+/* teste do gemini */
+/* Configuração do fundo e espaçamento geral */
+
+/* O Contêiner da Grade */
+.grid-container {
+  display: grid;
+  /* Cria duas colunas de tamanhos iguais */
+ grid-template-columns: 1fr 1fr 1fr 1fr ; 
+  /* Define o espaçamento (linhas brancas da imagem) */
+  gap: 10px; 
+   padding-top: 200px;
+  /* Desenha o mapa do layout */
+  grid-template-areas:
+"cabecalho cabecalho cabecalho cabecalho"
+"testocabel testocabel testocabel testocabel"
+    "dealer dealer dealer dealer "
+    "valores valores principal principal "
+    "valores valores principal principal "
+    "gadget gadget principal principal"
+    "gadget gadget principal principal"
+    "quando quando quando quando "
+
+    ;
+    font-family: copperplate;
+}
+
+/* Estilo visual padrão dos blocos (cor azulada da imagem) */
+.bloco {
+  background-color: #FDFDFF;
+  color: #3b3b5c;
+  padding: 10px;
+  
+  
+ 
+  font-weight: bold;
+  border-radius: 2px;
+}
+
+/* Vinculando cada classe à sua respectiva área no mapa */
+.cabecalho { grid-area: cabecalho;
+    min-height: 60px; 
+    max-height: fit-content;
+    margin-left: 8%; 
+    margin-right: 8%;
+    margin-top:1%;
+    display: block;
+}
+.dealer{ grid-area:  dealer;
+ min-height: 60px; 
+    margin-left: 8%; 
+    margin-right: 8%;
+    margin-top: 5%;
+    /* background-color: ; */
+}
+
+
+
+.principal { grid-area: principal; 
+    min-height: 40px; 
+    margin-left: 10%; 
+    margin-right: 16%;
+    margin-top: 5%;}
+
+.valores { grid-area: valores;
+     min-height: 40px;
+     margin-top: 5%;
+     margin-left: 16%;
+      margin-right:10%;
+    display: block; }
+
+.quando   { grid-area: quando; 
+    min-height: 40px;
+    margin-top: 5%;
+     margin-left: 8%; 
+     margin-right: 8%;
+     margin-bottom: 10%;}
+
+
+
+
+.testocabel{ grid-area: testocabel;
+    min-height: 60px; 
+    margin-left: 8%; 
+    margin-right: 8%;
+    margin-top: 0%;
+}
+
+
+.gadget{background-color:none;grid-area: gadget;min-height: 200px;margin-top: 30px; margin-left: 30px; margin-right: 30px;margin-bottom: 30px;}
+/* edição das iagens dos naipes e das cartas */
+.cartas{
+    width: 100%;
+}
+.naipe{
+    width: 40%;
+}
+.logtruco{
+    width: 100%;
+    background-color:#d9d9d9;
+}
+/* TESTOS */
+h3{
+    color: BLACK;
+}
+B{
+    color:crimson;
+}
+H1{
+    color:darkred;
+}
+small{
+    color: lightslategray;
+}
+U{
+    color: #7b0000;
+}
+i{
+    color: #333333;
+}
+/* cor dos texto da are "va;or das cartas" */
+.pintarpreto{
+    color: black;
+}
+.mudarcordosinais{
+ color:#999999;
+}
+/* tentativa de responsfividade parte 333333 */
