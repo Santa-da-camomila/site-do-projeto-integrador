@@ -219,3 +219,109 @@ i{
  color:#999999;
 }
 /* tentativa de responsfividade parte 333333 */
+
+
+
+
+/*aqui comoça responsividade  */
+
+
+/* ==========================================================================
+   2. REGRAS DE RESPONSIVIDADE PARA TABLETS (Telas até 1023px)
+   ========================================================================== */
+@media (max-width: 1023px) {
+    .logo {
+        width: 280px;
+    }
+
+    .abas {
+        gap: 35px; /* Diminui o recuo largo entre as abas do menu */
+    }
+
+    .grid-container {
+        padding-top: 180px; /* Reduz a distância por conta do encolhimento do menu */
+    }
+
+    /* Reduz as margens laterais grandes para o conteúdo ocupar mais espaço na tela */
+    .cabecalho, .dealer, .testocabel, .quando {
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+
+    /* Ajusta as margens dos blocos que dividem espaço lado a lado */
+    .valores, .gadget {
+        margin-left: 4%;
+        margin-right: 2%;
+    }
+
+    .principal {
+        margin-left: 2%;
+        margin-right: 4%;
+    }
+}
+
+
+/* ==========================================================================
+   3. REGRAS DE RESPONSIVIDADE PARA CELULARES (Telas até 767px)
+   ========================================================================== */
+@media (max-width: 767px) {
+    .logo {
+        width: 60%;
+        max-width: 220px;
+    }
+
+    /* Permite que o menu quebre em linhas adicionais se faltar espaço lateral */
+    .abas {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .truque, .pasty, .blaja {
+        font-size: 14px;
+        padding: 8px 12px;
+        flex: 1 1 auto;
+        text-align: center;
+    }
+
+    /* Transforma a grade de 4 colunas em 1 coluna vertical única */
+    .grid-container {
+        grid-template-columns: 1fr; 
+        gap: 15px;
+        padding-top: 220px; /* Compensa a quebra de linha do menu no mobile */
+        padding-left: 15px;
+        padding-right: 15px;
+        /* Reordena o mapa para empilhar tudo de cima a baixo */
+        grid-template-areas:
+            "cabecalho"
+            "testocabel"
+            "dealer"
+            "valores"
+            "gadget"
+            "principal"
+            "quando";
+    }
+
+    /* Reseta as margens laterais pesadas e alturas mínimas fixas no mobile */
+    .cabecalho, .dealer, .principal, .valores, .quando, .testocabel, .gadget {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 15px;
+        margin-bottom: 5px;
+        min-height: auto; 
+    }
+
+    /* Espaçamento final na última seção da página */
+    .quando {
+        margin-bottom: 35px;
+    }
+
+    /* Amplia o tamanho dos elementos gráficos menores na tela compacta */
+    .naipe {
+        width: 60%; 
+        display: block;
+        margin: 0 auto; /* Centraliza o naipe dentro do bloco */
+    }
+}
