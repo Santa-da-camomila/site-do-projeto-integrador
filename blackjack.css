@@ -185,7 +185,8 @@ margin-bottom: 20%;}
 
 /* foto do cabecalho */
 .cabecalhotruco{
-    max-width: 100%;   
+    width: 100%;
+     justify-content:center;
 }
 
 .cartas21{
