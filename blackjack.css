@@ -113,15 +113,14 @@ text-decoration: none;
 }
 
 /* Vinculando cada classe à sua respectiva área no mapa */
-.cabecalho { grid-area: cabecalho;
+.cabecalho { 
+    grid-area: cabecalho;
     min-height: 60px; 
     max-height: fit-content;
     margin-left: 8%; 
     margin-right: 8%;
     margin-top: 1%;
     display: block;
-  
-
 }
 .dealer{ grid-area:  dealer;
  min-height: 60px; 
