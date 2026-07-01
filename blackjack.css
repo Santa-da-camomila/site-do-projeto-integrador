@@ -122,6 +122,9 @@ text-decoration: none;
     margin-top: 1%;
     display: block;
 }
+.cabecalho img{
+    justify-content: center;
+}
 .dealer{ grid-area:  dealer;
  min-height: 60px; 
     margin-left: 8%; 
