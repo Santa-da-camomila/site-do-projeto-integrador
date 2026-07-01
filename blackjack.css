@@ -35,6 +35,7 @@ main{
     width: 330px; /* Ajuste o tamanho conforme sua necessidade */
     height: auto;
     margin-top: 10px;
+    background-color:#7f1734;
 }
 
 /* Estilização das Abas */
